@@ -1,5 +1,14 @@
 # eve
 
+## 0.24.5
+
+### Patch Changes
+
+- bfbbe92: Add `eve build --profile <path>` for a machine-readable build-timing and final-output-size report. Profile collection is best-effort, so reporting failures do not fail an otherwise successful build.
+- dab9889: Allow agents to remove the root-only built-in `agent` delegation tool with `disableTool()` from `agent/tools/agent.ts`.
+- 20cd9a1: Added `POST /eve/v1/session/:sessionId/cancel` to the eve HTTP channel for requesting cancellation of an in-flight turn. The optional `{ turnId }` body limits the request to the turn the caller observed; the response reports `"cancelling"` when a cancellation hook accepts it or the benign `"no_active_turn"` when no resumable target exists.
+- e45a066: `eve link` now lets you create a Vercel project or link an existing one, matching the project setup available through `/model` usage.
+
 ## 0.24.4
 
 ### Patch Changes
